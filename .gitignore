@@ -14,7 +14,7 @@ env/
 !.env.example
 
 # Data
-*.csv
+# *.csv
 
 # IDE
 .vscode/
