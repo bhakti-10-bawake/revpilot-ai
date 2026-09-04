@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Recovery Queue | RevPilot AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="recovery.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-mark">R</div>
+
+            <div class="brand-info">
+                <div class="brand-name">RevPilot</div>
+                <div class="brand-caption">AI REVENUE RECOVERY</div>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <div class="nav-section">
+                <span class="nav-section-title">WORKSPACE</span>
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="recovery.html" class="nav-item active">
+                    <span class="nav-icon">↻</span>
+                    <span>Recovery Queue</span>
+                    <span class="nav-badge">24</span>
+                </a>
+
+                <a href="transactions.html" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="customers.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    <span>Customers</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title">AI INTELLIGENCE</span>
+
+                <a href="boardroom.html" class="nav-item">
+                    <span class="nav-icon">✦</span>
+                    <span>AI Boardroom</span>
+                </a>
+
+                <a href="analytics.html" class="nav-item">
+                    <span class="nav-icon">◫</span>
+                    <span>Analytics</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <span class="nav-section-title">SYSTEM</span>
+
+                <a href="audit.html" class="nav-item">
+                    <span class="nav-icon">☷</span>
+                    <span>Audit Trail</span>
+                </a>
+
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>AI System Online</strong>
+                    <span>All agents operational</span>
+                </div>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">RT</div>
+
+                <div class="user-info">
+                    <strong>Revenue Team</strong>
+                    <span>Operations</span>
+                </div>
+
+                <button id="logoutBtn" class="logout-btn" title="Log out">
+                    ↪
+                </button>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+                <div class="breadcrumb">
+                    Workspace
+                    <span>/</span>
+                    <strong>Recovery Queue</strong>
+                </div>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="simulation-badge">
+                    <span class="simulation-dot"></span>
+                    Synthetic environment
+                </div>
+
+                <button class="topbar-icon-btn" id="searchBtn" title="Search">
+                    ⌕
+                </button>
+
+                <button class="topbar-icon-btn" id="notificationBtn" title="Notifications">
+                    ♢
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="topbar-user">
+                    <div class="topbar-avatar">RT</div>
+                    <span>Revenue Team</span>
+                    <span class="chevron">⌄</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= PAGE CONTENT ================= -->
+
+        <section class="page-content">
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div class="page-header-text">
+
+                    <div class="eyebrow">
+                        REVENUE OPERATIONS
+                    </div>
+
+                    <h1>Recovery Queue</h1>
+
+                    <p>
+                        Prioritize failed payments by recovery potential,
+                        customer context, and financial risk.
+                    </p>
+
+                </div>
+
+                <div class="page-header-actions">
+
+                    <button class="secondary-btn" id="refreshQueueBtn">
+                        <span>↻</span>
+                        Refresh Queue
+                    </button>
+
+                    <button class="primary-btn" id="runRecoveryBtn">
+                        <span>✦</span>
+                        Run AI Recovery
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= KPI CARDS ================= -->
+
+            <div class="metric-grid">
+
+                <div class="metric-card">
+
+                    <div class="metric-card-top">
+                        <span class="metric-label">
+                            PAYMENTS REQUIRING ATTENTION
+                        </span>
+
+                        <span class="metric-icon">↻</span>
+                    </div>
+
+                    <div class="metric-value">342</div>
+
+                    <div class="metric-meta">
+                        <span class="metric-positive">↓ 8.4%</span>
+                        <span>vs. previous cycle</span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-card-top">
+                        <span class="metric-label">
+                            REVENUE AT RISK
+                        </span>
+
+                        <span class="metric-icon">₹</span>
+                    </div>
+
+                    <div class="metric-value">₹8.42L</div>
+
+                    <div class="metric-meta">
+                        <span>Across active recovery cases</span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-card-top">
+                        <span class="metric-label">
+                            HIGH RISK CASES
+                        </span>
+
+                        <span class="metric-icon risk-icon">!</span>
+                    </div>
+
+                    <div class="metric-value">48</div>
+
+                    <div class="metric-meta">
+                        <span class="metric-warning">14.0%</span>
+                        <span>of active queue</span>
+                    </div>
+
+                </div>
+
+
+                <div class="metric-card">
+
+                    <div class="metric-card-top">
+                        <span class="metric-label">
+                            RECOVERY OPPORTUNITY
+                        </span>
+
+                        <span class="metric-icon">↗</span>
+                    </div>
+
+                    <div class="metric-value">73.2%</div>
+
+                    <div class="metric-meta">
+                        <span class="metric-positive">+5.7%</span>
+                        <span>AI projected recovery</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= FILTER BAR ================= -->
+
+            <div class="queue-toolbar">
+
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="queueSearch"
+                        placeholder="Search transaction, customer or failure..."
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <select id="failureFilter">
+                        <option value="all">All failure types</option>
+                        <option value="insufficient_funds">Insufficient funds</option>
+                        <option value="payment_declined">Payment declined</option>
+                        <option value="network_timeout">Network timeout</option>
+                        <option value="bank_error">Bank error</option>
+                        <option value="card_expired">Card expired</option>
+                    </select>
+
+
+                    <select id="riskFilter">
+                        <option value="all">All risk levels</option>
+                        <option value="low">Low risk</option>
+                        <option value="medium">Medium risk</option>
+                        <option value="high">High risk</option>
+                    </select>
+
+
+                    <select id="actionFilter">
+                        <option value="all">All AI actions</option>
+                        <option value="retry">Retry payment</option>
+                        <option value="reminder">Customer reminder</option>
+                        <option value="offer">Recovery offer</option>
+                        <option value="stop">Do not retry</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= QUEUE TABS ================= -->
+
+            <div class="queue-tabs">
+
+                <button class="queue-tab active" data-tab="all">
+                    All
+                    <span>342</span>
+                </button>
+
+                <button class="queue-tab" data-tab="high-risk">
+                    High Risk
+                    <span>48</span>
+                </button>
+
+                <button class="queue-tab" data-tab="retry-ready">
+                    Retry Ready
+                    <span>126</span>
+                </button>
+
+                <button class="queue-tab" data-tab="customer-intervention">
+                    Customer Intervention
+                    <span>94</span>
+                </button>
+
+                <button class="queue-tab" data-tab="stopped">
+                    Stopped
+                    <span>74</span>
+                </button>
+
+            </div>
+
+
+            <!-- ================= RECOVERY TABLE ================= -->
+
+            <div class="queue-layout">
+
+                <div class="queue-table-card">
+
+                    <div class="table-header">
+
+                        <div>
+                            <h2>Active Recovery Cases</h2>
+                            <p>
+                                AI-prioritized payment failures awaiting action.
+                            </p>
+                        </div>
+
+                        <div class="table-header-meta">
+                            <span class="live-indicator"></span>
+                            Updated moments ago
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="recovery-table">
+
+                            <thead>
+
+                                <tr>
+                                    <th>TRANSACTION</th>
+                                    <th>AMOUNT</th>
+                                    <th>FAILURE</th>
+                                    <th>CUSTOMER</th>
+                                    <th>RISK</th>
+                                    <th>AI RECOMMENDATION</th>
+                                    <th>EXPECTED RECOVERY</th>
+                                    <th>STATUS</th>
+                                    <th></th>
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="recoveryTableBody">
+
+                                <tr
+                                    class="recovery-row"
+                                    data-transaction-id="TXN-00001"
+                                >
+
+                                    <td>
+                                        <div class="transaction-cell">
+                                            <strong>TXN-00001</strong>
+                                            <span>2 retries</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹2,499</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="failure-cell">
+                                            <strong>Payment declined</strong>
+                                            <span>Bank response</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+                                            <div class="customer-avatar">AK</div>
+
+                                            <div>
+                                                <strong>Returning</strong>
+                                                <span>High engagement</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-pill medium">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="recommendation">
+                                            <span class="recommendation-icon">↻</span>
+                                            <div>
+                                                <strong>Retry + reminder</strong>
+                                                <span>12 hours</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="recovery-value">
+                                            <strong>₹1,824</strong>
+                                            <span>73% probability</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-pill ready">
+                                            Retry ready
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            class="review-btn"
+                                            data-transaction-id="TXN-00001"
+                                        >
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr
+                                    class="recovery-row"
+                                    data-transaction-id="TXN-00002"
+                                >
+
+                                    <td>
+                                        <div class="transaction-cell">
+                                            <strong>TXN-00002</strong>
+                                            <span>1 retry</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹5,999</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="failure-cell">
+                                            <strong>Insufficient funds</strong>
+                                            <span>Bank response</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+                                            <div class="customer-avatar">RS</div>
+
+                                            <div>
+                                                <strong>Returning</strong>
+                                                <span>Strong history</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-pill low">
+                                            Low
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="recommendation">
+                                            <span class="recommendation-icon">✦</span>
+                                            <div>
+                                                <strong>Personalized offer</strong>
+                                                <span>5% incentive</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="recovery-value">
+                                            <strong>₹4,712</strong>
+                                            <span>79% probability</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-pill intervention">
+                                            Intervention
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            class="review-btn"
+                                            data-transaction-id="TXN-00002"
+                                        >
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr
+                                    class="recovery-row"
+                                    data-transaction-id="TXN-00003"
+                                >
+
+                                    <td>
+                                        <div class="transaction-cell">
+                                            <strong>TXN-00003</strong>
+                                            <span>3 retries</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹1,299</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="failure-cell">
+                                            <strong>Network timeout</strong>
+                                            <span>Gateway timeout</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+                                            <div class="customer-avatar">PM</div>
+
+                                            <div>
+                                                <strong>New</strong>
+                                                <span>Low engagement</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-pill high">
+                                            High
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="recommendation">
+                                            <span class="recommendation-icon stop">×</span>
+                                            <div>
+                                                <strong>Do not retry</strong>
+                                                <span>Risk threshold</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="recovery-value muted">
+                                            <strong>₹0</strong>
+                                            <span>Recovery blocked</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-pill stopped">
+                                            Stopped
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            class="review-btn"
+                                            data-transaction-id="TXN-00003"
+                                        >
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr
+                                    class="recovery-row"
+                                    data-transaction-id="TXN-00004"
+                                >
+
+                                    <td>
+                                        <div class="transaction-cell">
+                                            <strong>TXN-00004</strong>
+                                            <span>0 retries</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹3,499</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="failure-cell">
+                                            <strong>Bank error</strong>
+                                            <span>Temporary failure</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+                                            <div class="customer-avatar">VN</div>
+
+                                            <div>
+                                                <strong>Returning</strong>
+                                                <span>High value</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-pill low">
+                                            Low
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="recommendation">
+                                            <span class="recommendation-icon">↻</span>
+                                            <div>
+                                                <strong>Retry payment</strong>
+                                                <span>In 4 hours</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="recovery-value">
+                                            <strong>₹2,694</strong>
+                                            <span>77% probability</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-pill ready">
+                                            Retry ready
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            class="review-btn"
+                                            data-transaction-id="TXN-00004"
+                                        >
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+
+                                <tr
+                                    class="recovery-row"
+                                    data-transaction-id="TXN-00005"
+                                >
+
+                                    <td>
+                                        <div class="transaction-cell">
+                                            <strong>TXN-00005</strong>
+                                            <span>1 retry</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <strong>₹899</strong>
+                                    </td>
+
+                                    <td>
+                                        <div class="failure-cell">
+                                            <strong>Card expired</strong>
+                                            <span>Payment method</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="customer-cell">
+                                            <div class="customer-avatar">NS</div>
+
+                                            <div>
+                                                <strong>Returning</strong>
+                                                <span>Medium engagement</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="risk-pill medium">
+                                            Medium
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <div class="recommendation">
+                                            <span class="recommendation-icon">!</span>
+                                            <div>
+                                                <strong>Payment method reminder</strong>
+                                                <span>Update card</span>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <div class="recovery-value">
+                                            <strong>₹656</strong>
+                                            <span>73% probability</span>
+                                        </div>
+                                    </td>
+
+                                    <td>
+                                        <span class="status-pill intervention">
+                                            Intervention
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <button
+                                            class="review-btn"
+                                            data-transaction-id="TXN-00005"
+                                        >
+                                            Review
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- TABLE FOOTER -->
+
+                    <div class="table-footer">
+
+                        <div class="pagination-info">
+                            Showing <strong>1–5</strong> of
+                            <strong>342</strong> recovery cases
+                        </div>
+
+                        <div class="pagination">
+
+                            <button
+                                class="pagination-btn"
+                                id="previousPage"
+                                disabled
+                            >
+                                ←
+                            </button>
+
+                            <button class="pagination-number active">
+                                1
+                            </button>
+
+                            <button class="pagination-number">
+                                2
+                            </button>
+
+                            <button class="pagination-number">
+                                3
+                            </button>
+
+                            <span>...</span>
+
+                            <button class="pagination-number">
+                                69
+                            </button>
+
+                            <button
+                                class="pagination-btn"
+                                id="nextPage"
+                            >
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ================= RECOVERY POLICY ================= -->
+
+                <aside class="policy-card">
+
+                    <div class="policy-header">
+
+                        <div class="policy-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <h3>AI Recovery Policy</h3>
+                            <span>Active guardrails</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="policy-section">
+
+                        <span class="policy-label">
+                            DECISION PRIORITY
+                        </span>
+
+                        <div class="policy-step">
+                            <span>01</span>
+                            <div>
+                                <strong>Customer context</strong>
+                                <p>Behavior & payment history</p>
+                            </div>
+                        </div>
+
+                        <div class="policy-step">
+                            <span>02</span>
+                            <div>
+                                <strong>Recovery probability</strong>
+                                <p>Expected successful recovery</p>
+                            </div>
+                        </div>
+
+                        <div class="policy-step">
+                            <span>03</span>
+                            <div>
+                                <strong>Financial guardrails</strong>
+                                <p>Margin & discount limits</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="policy-divider"></div>
+
+
+                    <div class="guardrail-list">
+
+                        <div class="guardrail-item">
+                            <span class="guardrail-check">✓</span>
+                            <div>
+                                <strong>Maximum discount</strong>
+                                <span>10%</span>
+                            </div>
+                        </div>
+
+                        <div class="guardrail-item">
+                            <span class="guardrail-check">✓</span>
+                            <div>
+                                <strong>Minimum net recovery</strong>
+                                <span>70%</span>
+                            </div>
+                        </div>
+
+                        <div class="guardrail-item">
+                            <span class="guardrail-check">✓</span>
+                            <div>
+                                <strong>Aggressive retries</strong>
+                                <span>Blocked for high risk</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="policy-footer">
+
+                        <span class="policy-status-dot"></span>
+
+                        <span>
+                            Finance Guardrail active
+                        </span>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="recovery.js"></script>
+
+</body>
+</html>

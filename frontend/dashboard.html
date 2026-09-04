@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>RevPilot AI — Overview</title>
+
+
+    <!-- =====================================================
+         FONT
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body class="app-page">
+
+
+    <!-- =====================================================
+         APPLICATION
+         ===================================================== -->
+
+    <div class="app-layout">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- =================================================
+                 BRAND
+                 ================================================= -->
+
+            <div class="sidebar-brand">
+
+                <div class="sidebar-logo">
+                    ↗
+                </div>
+
+
+                <div>
+
+                    <div class="sidebar-brand-name">
+                        RevPilot <span>AI</span>
+                    </div>
+
+
+                    <div class="sidebar-brand-caption">
+                        Revenue Intelligence
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
+
+            <nav class="sidebar-nav">
+
+
+                <!-- =================================================
+                     WORKSPACE
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <div class="nav-label">
+                        WORKSPACE
+                    </div>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="nav-item active"
+                        data-page="overview"
+                    >
+
+                        <span class="nav-icon">
+                            ⌂
+                        </span>
+
+                        <span>
+                            Overview
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="recovery.html"
+                        class="nav-item"
+                        data-page="recovery"
+                    >
+
+                        <span class="nav-icon">
+                            ↻
+                        </span>
+
+                        <span>
+                            Recovery Queue
+                        </span>
+
+                        <span class="nav-badge">
+                            0
+                        </span>
+
+                    </a>
+
+
+                    <!-- =================================================
+                         BATCH RECOVERY
+                         ================================================= -->
+
+                    <a
+                        href="batch-recovery.html"
+                        class="nav-item"
+                        data-page="batch-recovery"
+                    >
+
+                        <span class="nav-icon">
+                            ◫
+                        </span>
+
+                        <span>
+                            Batch Recovery
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="transactions.html"
+                        class="nav-item"
+                        data-page="transactions"
+                    >
+
+                        <span class="nav-icon">
+                            ▣
+                        </span>
+
+                        <span>
+                            Transactions
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="customers.html"
+                        class="nav-item"
+                        data-page="customers"
+                    >
+
+                        <span class="nav-icon">
+                            ♙
+                        </span>
+
+                        <span>
+                            Customers
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     AI INTELLIGENCE
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <div class="nav-label">
+                        AI INTELLIGENCE
+                    </div>
+
+
+                    <a
+                        href="boardroom.html"
+                        class="nav-item"
+                        data-page="boardroom"
+                    >
+
+                        <span class="nav-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            AI Boardroom
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="analytics.html"
+                        class="nav-item"
+                        data-page="analytics"
+                    >
+
+                        <span class="nav-icon">
+                            ◫
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </a>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     SYSTEM
+                     ================================================= -->
+
+                <div class="nav-section">
+
+                    <div class="nav-label">
+                        SYSTEM
+                    </div>
+
+
+                    <a
+                        href="audit.html"
+                        class="nav-item"
+                        data-page="audit"
+                    >
+
+                        <span class="nav-icon">
+                            ☷
+                        </span>
+
+                        <span>
+                            Audit Trail
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="settings.html"
+                        class="nav-item"
+                        data-page="settings"
+                    >
+
+                        <span class="nav-icon">
+                            ⚙
+                        </span>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+
+            <!-- =================================================
+                 SIDEBAR FOOTER
+                 ================================================= -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- System status -->
+
+                <div class="sidebar-status">
+
+                    <span class="online-dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            AI System Online
+                        </strong>
+
+                        <span>
+                            All agents operational
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- User -->
+
+                <div class="sidebar-user">
+
+                    <div class="user-avatar">
+                        RV
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong>
+                            Revenue Team
+                        </strong>
+
+                        <span>
+                            Operations
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        class="logout-button"
+                        id="logoutButton"
+                        title="Sign out"
+                        type="button"
+                    >
+                        ↪
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="app-topbar">
+
+
+                <div class="breadcrumb">
+
+                    <span>
+                        Workspace
+                    </span>
+
+                    <span class="breadcrumb-separator">
+                        /
+                    </span>
+
+                    <strong>
+                        Overview
+                    </strong>
+
+                </div>
+
+
+
+                <div class="topbar-actions">
+
+
+                    <!-- Search -->
+
+                    <button
+                        class="topbar-button"
+                        id="dashboardSearchButton"
+                        title="Search transactions"
+                        type="button"
+                    >
+                        ⌕
+                    </button>
+
+
+
+                    <!-- Notifications -->
+
+                    <button
+                        class="topbar-button notification-button"
+                        id="dashboardNotificationButton"
+                        title="Notifications"
+                        type="button"
+                    >
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+
+                    <div class="topbar-divider"></div>
+
+
+
+                    <!-- User -->
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar">
+                            RV
+                        </div>
+
+
+                        <div class="topbar-user-info">
+
+                            <strong>
+                                Revenue Team
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </div>
+
+
+                        <span class="topbar-chevron">
+                            ˅
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <div class="page-content">
+
+
+                <!-- =================================================
+                     PAGE HEADING
+                     ================================================= -->
+
+                <div class="page-heading">
+
+
+                    <div>
+
+                        <div class="page-eyebrow">
+                            REVENUE OPERATIONS
+                        </div>
+
+
+                        <h1>
+                            Overview
+                        </h1>
+
+
+                        <p>
+                            Connecting to the RevPilot recovery engine...
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-action"
+                        id="runRecoveryButton"
+                        type="button"
+                    >
+
+                        <span>
+                            ✦
+                        </span>
+
+                        Run Recovery Analysis
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     KPI CARDS
+                     ================================================= -->
+
+                <section class="metrics-grid">
+
+
+                    <!-- =================================================
+                         REVENUE AT RISK
+                         ================================================= -->
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                REVENUE AT RISK
+                            </span>
+
+
+                            <div class="metric-icon risk">
+                                ₹
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            class="metric-value"
+                            id="dashboardRevenueAtRisk"
+                        >
+                            —
+                        </strong>
+
+
+                        <div class="metric-change warning">
+
+                            <span>
+                                Live
+                            </span>
+
+                            <span>
+                                batch portfolio
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         RECOVERED REVENUE
+                         ================================================= -->
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                SIMULATED RECOVERY
+                            </span>
+
+
+                            <div class="metric-icon recovered">
+                                ↗
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            class="metric-value"
+                            id="dashboardRecoveredRevenue"
+                        >
+                            —
+                        </strong>
+
+
+                        <div class="metric-change positive">
+
+                            <span>
+                                Modeled
+                            </span>
+
+                            <span>
+                                under policy
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FAILED PAYMENTS
+                         ================================================= -->
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                FAILED PAYMENTS
+                            </span>
+
+
+                            <div class="metric-icon failed">
+                                !
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            class="metric-value"
+                            id="dashboardFailedPayments"
+                        >
+                            —
+                        </strong>
+
+
+                        <div class="metric-change neutral">
+
+                            <span>
+                                Live
+                            </span>
+
+                            <span>
+                                recovery cases
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         RECOVERY RATE
+                         ================================================= -->
+
+                    <div class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                RECOVERY RATE
+                            </span>
+
+
+                            <div class="metric-icon rate">
+                                %
+                            </div>
+
+                        </div>
+
+
+                        <strong
+                            class="metric-value"
+                            id="dashboardRecoveryRate"
+                        >
+                            —
+                        </strong>
+
+
+                        <div class="metric-change positive">
+
+                            <span>
+                                Simulated
+                            </span>
+
+                            <span>
+                                portfolio rate
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     PERFORMANCE + FAILURE ANALYSIS
+                     ================================================= -->
+
+                <section class="dashboard-grid">
+
+
+                    <!-- =================================================
+                         PERFORMANCE
+                         ================================================= -->
+
+                    <div class="dashboard-card performance-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    PERFORMANCE
+                                </div>
+
+
+                                <h2>
+                                    Recovery performance
+                                </h2>
+
+                            </div>
+
+
+                            <select class="period-select">
+
+                                <option value="Last 30 days">
+                                    Last 30 days
+                                </option>
+
+                                <option value="Last 7 days">
+                                    Last 7 days
+                                </option>
+
+                                <option value="Last 90 days">
+                                    Last 90 days
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="chart-area">
+
+                            <div class="chart-placeholder">
+
+                                <div class="chart-grid-lines">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                </div>
+
+
+                                <div class="chart-line">
+
+                                    <div class="chart-point p1"></div>
+                                    <div class="chart-point p2"></div>
+                                    <div class="chart-point p3"></div>
+                                    <div class="chart-point p4"></div>
+                                    <div class="chart-point p5"></div>
+                                    <div class="chart-point p6"></div>
+                                    <div class="chart-point p7"></div>
+
+                                </div>
+
+
+                                <div class="chart-labels">
+
+                                    <span>
+                                        Aug 05
+                                    </span>
+
+                                    <span>
+                                        Aug 10
+                                    </span>
+
+                                    <span>
+                                        Aug 15
+                                    </span>
+
+                                    <span>
+                                        Aug 20
+                                    </span>
+
+                                    <span>
+                                        Aug 25
+                                    </span>
+
+                                    <span>
+                                        Aug 30
+                                    </span>
+
+                                    <span>
+                                        Sep 04
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         FAILURE BREAKDOWN
+                         ================================================= -->
+
+                    <div class="dashboard-card breakdown-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    FAILURE ANALYSIS
+                                </div>
+
+
+                                <h2>
+                                    Revenue by failure
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="breakdown-list">
+
+
+                            <div class="breakdown-item">
+
+                                <div class="breakdown-info">
+
+                                    <span>
+                                        Insufficient funds
+                                    </span>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress">
+                                    <span style="width:78%"></span>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="breakdown-item">
+
+                                <div class="breakdown-info">
+
+                                    <span>
+                                        Bank error
+                                    </span>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress">
+                                    <span style="width:58%"></span>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="breakdown-item">
+
+                                <div class="breakdown-info">
+
+                                    <span>
+                                        Payment declined
+                                    </span>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress">
+                                    <span style="width:44%"></span>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="breakdown-item">
+
+                                <div class="breakdown-info">
+
+                                    <span>
+                                        Network timeout
+                                    </span>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress">
+                                    <span style="width:29%"></span>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="breakdown-item">
+
+                                <div class="breakdown-info">
+
+                                    <span>
+                                        Other
+                                    </span>
+
+                                    <strong>
+                                        —
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="progress">
+                                    <span style="width:18%"></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     RECOVERY QUEUE
+                     ================================================= -->
+
+                <section class="dashboard-card queue-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <div class="card-eyebrow">
+                                ATTENTION REQUIRED
+                            </div>
+
+
+                            <h2>
+                                Recovery queue
+                            </h2>
+
+                        </div>
+
+
+                        <a
+                            href="recovery.html"
+                            class="view-all"
+                        >
+                            View all →
+                        </a>
+
+                    </div>
+
+
+
+                    <div class="table-wrapper">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        TRANSACTION
+                                    </th>
+
+                                    <th>
+                                        AMOUNT
+                                    </th>
+
+                                    <th>
+                                        FAILURE
+                                    </th>
+
+                                    <th>
+                                        CUSTOMER
+                                    </th>
+
+                                    <th>
+                                        RISK
+                                    </th>
+
+                                    <th>
+                                        RECOMMENDED ACTION
+                                    </th>
+
+                                    <th></th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <tr>
+
+                                    <td>
+                                        <strong>
+                                            Open Batch Recovery
+                                        </strong>
+                                    </td>
+
+
+                                    <td>
+                                        —
+                                    </td>
+
+
+                                    <td>
+                                        Live portfolio analysis
+                                    </td>
+
+
+                                    <td>
+                                        —
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill medium">
+                                            AI
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+                                        Run batch analysis
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="row-action"
+                                            type="button"
+                                            id="dashboardQueueButton"
+                                        >
+                                            Open
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     AI STATUS
+                     ================================================= -->
+
+                <section class="ai-status-card">
+
+
+                    <div class="ai-status-icon">
+                        ✦
+                    </div>
+
+
+                    <div class="ai-status-content">
+
+                        <div class="card-eyebrow">
+                            AI BOARDROOM
+                        </div>
+
+
+                        <h2 id="dashboardAiTitle">
+                            Loading live recovery analysis...
+                        </h2>
+
+
+                        <p id="dashboardAiDescription">
+                            Connecting to the RevPilot recovery engine...
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="secondary-action"
+                        id="openBoardroom"
+                        type="button"
+                    >
+                        Open AI Boardroom →
+                    </button>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     LIVE BATCH CTA
+                     ================================================= -->
+
+                <section class="dashboard-card batch-cta-card">
+
+
+                    <div>
+
+                        <div class="card-eyebrow">
+                            PORTFOLIO INTELLIGENCE
+                        </div>
+
+
+                        <h2>
+                            Analyze the entire recovery portfolio
+                        </h2>
+
+
+                        <p>
+                            Run the multi-agent recovery engine across
+                            failed payments and surface automatic,
+                            review, and blocked decisions.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="primary-action"
+                        id="dashboardBatchButton"
+                        type="button"
+                    >
+
+                        ✦
+
+                        Open Batch Recovery
+
+                    </button>
+
+                </section>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="dashboard.js"></script>
+
+
+</body>
+
+</html>

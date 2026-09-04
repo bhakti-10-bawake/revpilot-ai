@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Boardroom | RevPilot AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="boardroom.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                R
+            </div>
+
+            <div class="brand-info">
+
+                <div class="brand-name">
+                    RevPilot
+                </div>
+
+                <div class="brand-caption">
+                    AI REVENUE RECOVERY
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <!-- WORKSPACE -->
+
+            <div class="nav-section">
+
+                <span class="nav-section-title">
+                    WORKSPACE
+                </span>
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    <span>Overview</span>
+                </a>
+
+                <a href="recovery.html" class="nav-item">
+                    <span class="nav-icon">↻</span>
+                    <span>Recovery Queue</span>
+                    <span class="nav-badge">24</span>
+                </a>
+
+                <a href="transactions.html" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    <span>Transactions</span>
+                </a>
+
+                <a href="customers.html" class="nav-item">
+                    <span class="nav-icon">♙</span>
+                    <span>Customers</span>
+                </a>
+
+            </div>
+
+
+            <!-- AI INTELLIGENCE -->
+
+            <div class="nav-section">
+
+                <span class="nav-section-title">
+                    AI INTELLIGENCE
+                </span>
+
+                <a href="boardroom.html" class="nav-item active">
+                    <span class="nav-icon">✦</span>
+                    <span>AI Boardroom</span>
+                </a>
+
+                <a href="analytics.html" class="nav-item">
+                    <span class="nav-icon">◫</span>
+                    <span>Analytics</span>
+                </a>
+
+            </div>
+
+
+            <!-- SYSTEM -->
+
+            <div class="nav-section">
+
+                <span class="nav-section-title">
+                    SYSTEM
+                </span>
+
+                <a href="audit.html" class="nav-item">
+                    <span class="nav-icon">☷</span>
+                    <span>Audit Trail</span>
+                </a>
+
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+
+            </div>
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+
+                    <strong>
+                        AI System Online
+                    </strong>
+
+                    <span>
+                        All agents operational
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">
+                    RT
+                </div>
+
+                <div class="user-info">
+
+                    <strong>
+                        Revenue Team
+                    </strong>
+
+                    <span>
+                        Operations
+                    </span>
+
+                </div>
+
+                <button
+                    id="logoutBtn"
+                    class="logout-btn"
+                    title="Log out"
+                >
+                    ↪
+                </button>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <div class="breadcrumb">
+
+                    AI Intelligence
+
+                    <span>/</span>
+
+                    <strong>
+                        AI Boardroom
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <div class="simulation-badge">
+
+                    <span class="simulation-dot"></span>
+
+                    Synthetic environment
+
+                </div>
+
+
+                <button
+                    class="topbar-icon-btn"
+                    id="searchBtn"
+                    title="Search"
+                >
+                    ⌕
+                </button>
+
+
+                <button
+                    class="topbar-icon-btn"
+                    id="notificationBtn"
+                    title="Notifications"
+                >
+                    ♢
+
+                    <span class="notification-dot"></span>
+
+                </button>
+
+
+                <div class="topbar-user">
+
+                    <div class="topbar-avatar">
+                        RT
+                    </div>
+
+                    <span>
+                        Revenue Team
+                    </span>
+
+                    <span class="chevron">
+                        ⌄
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             PAGE CONTENT
+             ================================================= -->
+
+        <section class="page-content">
+
+
+            <!-- PAGE HEADER -->
+
+            <div class="page-header">
+
+                <div class="page-header-text">
+
+                    <div class="eyebrow">
+                        MULTI-AGENT DECISION ENGINE
+                    </div>
+
+                    <h1>
+                        AI Boardroom
+                    </h1>
+
+                    <p>
+                        Watch specialized AI agents evaluate a failed payment,
+                        challenge the recovery strategy, and reach a financially
+                        responsible decision.
+                    </p>
+
+                </div>
+
+
+                <div class="page-header-actions">
+
+                    <button
+                        class="secondary-btn"
+                        id="backToQueueBtn"
+                    >
+                        ← Recovery Queue
+                    </button>
+
+                    <button
+                        class="primary-btn"
+                        id="runBoardroomBtn"
+                    >
+                        <span>✦</span>
+                        Run Boardroom
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 TRANSACTION CONTEXT
+                 ================================================= -->
+
+            <div class="transaction-context">
+
+                <div class="context-left">
+
+                    <div class="context-label">
+                        ANALYZING TRANSACTION
+                    </div>
+
+                    <div class="transaction-id" id="transactionId">
+                        TXN-00001
+                    </div>
+
+                    <span class="context-status">
+                        Failed payment
+                    </span>
+
+                </div>
+
+
+                <div class="context-divider"></div>
+
+
+                <div class="context-item">
+
+                    <span class="context-item-label">
+                        AMOUNT
+                    </span>
+
+                    <strong id="transactionAmount">
+                        ₹2,499
+                    </strong>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <span class="context-item-label">
+                        FAILURE
+                    </span>
+
+                    <strong id="transactionFailure">
+                        Payment declined
+                    </strong>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <span class="context-item-label">
+                        CUSTOMER
+                    </span>
+
+                    <strong id="transactionCustomer">
+                        Returning
+                    </strong>
+
+                </div>
+
+
+                <div class="context-item">
+
+                    <span class="context-item-label">
+                        RETRIES
+                    </span>
+
+                    <strong id="transactionRetries">
+                        2
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 BOARDROOM STATUS
+                 ================================================= -->
+
+            <div class="boardroom-status">
+
+                <div class="status-main">
+
+                    <div
+                        class="boardroom-pulse"
+                        id="boardroomPulse"
+                    ></div>
+
+                    <div>
+
+                        <strong id="boardroomStatus">
+                            Boardroom ready
+                        </strong>
+
+                        <span id="boardroomSubstatus">
+                            Five specialized agents are standing by
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="run-progress">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Decision progress
+                        </span>
+
+                        <strong id="progressPercent">
+                            0%
+                        </strong>
+
+                    </div>
+
+                    <div class="progress-track">
+
+                        <div
+                            class="progress-bar"
+                            id="progressBar"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 AGENT BOARDROOM
+                 ================================================= -->
+
+            <div class="boardroom-grid">
+
+
+                <!-- =============================================
+                     RISK AGENT
+                     ============================================= -->
+
+                <article
+                    class="agent-card"
+                    data-agent="risk"
+                >
+
+                    <div class="agent-header">
+
+                        <div class="agent-identity">
+
+                            <div class="agent-icon risk">
+                                R
+                            </div>
+
+                            <div>
+
+                                <div class="agent-name">
+                                    Risk Agent
+                                </div>
+
+                                <div class="agent-role">
+                                    PAYMENT RISK
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="agent-status waiting">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="agent-divider"></div>
+
+
+                    <div class="agent-output">
+
+                        <div class="agent-output-label">
+                            RECOMMENDATION
+                        </div>
+
+                        <strong
+                            class="agent-recommendation"
+                            id="riskRecommendation"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong id="riskConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-track">
+
+                        <div
+                            class="confidence-bar"
+                            id="riskConfidenceBar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="agent-reasoning">
+
+                        <span>
+                            REASONING
+                        </span>
+
+                        <p id="riskReasoning">
+                            Awaiting transaction analysis.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     TIMING AGENT
+                     ============================================= -->
+
+                <article
+                    class="agent-card"
+                    data-agent="timing"
+                >
+
+                    <div class="agent-header">
+
+                        <div class="agent-identity">
+
+                            <div class="agent-icon timing">
+                                T
+                            </div>
+
+                            <div>
+
+                                <div class="agent-name">
+                                    Timing Agent
+                                </div>
+
+                                <div class="agent-role">
+                                    RETRY TIMING
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="agent-status waiting">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="agent-divider"></div>
+
+
+                    <div class="agent-output">
+
+                        <div class="agent-output-label">
+                            RECOMMENDATION
+                        </div>
+
+                        <strong
+                            class="agent-recommendation"
+                            id="timingRecommendation"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong id="timingConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-track">
+
+                        <div
+                            class="confidence-bar"
+                            id="timingConfidenceBar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="agent-reasoning">
+
+                        <span>
+                            REASONING
+                        </span>
+
+                        <p id="timingReasoning">
+                            Awaiting transaction analysis.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     CUSTOMER AGENT
+                     ============================================= -->
+
+                <article
+                    class="agent-card"
+                    data-agent="customer"
+                >
+
+                    <div class="agent-header">
+
+                        <div class="agent-identity">
+
+                            <div class="agent-icon customer">
+                                C
+                            </div>
+
+                            <div>
+
+                                <div class="agent-name">
+                                    Customer Agent
+                                </div>
+
+                                <div class="agent-role">
+                                    CUSTOMER BEHAVIOR
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="agent-status waiting">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="agent-divider"></div>
+
+
+                    <div class="agent-output">
+
+                        <div class="agent-output-label">
+                            RECOMMENDATION
+                        </div>
+
+                        <strong
+                            class="agent-recommendation"
+                            id="customerRecommendation"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong id="customerConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-track">
+
+                        <div
+                            class="confidence-bar"
+                            id="customerConfidenceBar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="agent-reasoning">
+
+                        <span>
+                            REASONING
+                        </span>
+
+                        <p id="customerReasoning">
+                            Awaiting transaction analysis.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     OFFER AGENT
+                     ============================================= -->
+
+                <article
+                    class="agent-card"
+                    data-agent="offer"
+                >
+
+                    <div class="agent-header">
+
+                        <div class="agent-identity">
+
+                            <div class="agent-icon offer">
+                                O
+                            </div>
+
+                            <div>
+
+                                <div class="agent-name">
+                                    Offer Agent
+                                </div>
+
+                                <div class="agent-role">
+                                    RECOVERY INCENTIVE
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="agent-status waiting">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="agent-divider"></div>
+
+
+                    <div class="agent-output">
+
+                        <div class="agent-output-label">
+                            RECOMMENDATION
+                        </div>
+
+                        <strong
+                            class="agent-recommendation"
+                            id="offerRecommendation"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong id="offerConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-track">
+
+                        <div
+                            class="confidence-bar"
+                            id="offerConfidenceBar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="agent-reasoning">
+
+                        <span>
+                            REASONING
+                        </span>
+
+                        <p id="offerReasoning">
+                            Awaiting transaction analysis.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- =============================================
+                     FINANCE GUARDRAIL
+                     ============================================= -->
+
+                <article
+                    class="agent-card guardrail-card"
+                    data-agent="finance"
+                >
+
+                    <div class="agent-header">
+
+                        <div class="agent-identity">
+
+                            <div class="agent-icon finance">
+                                F
+                            </div>
+
+                            <div>
+
+                                <div class="agent-name">
+                                    Finance Guardrail
+                                </div>
+
+                                <div class="agent-role">
+                                    FINANCIAL CONTROL
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <span class="agent-status waiting">
+                            Waiting
+                        </span>
+
+                    </div>
+
+
+                    <div class="agent-divider"></div>
+
+
+                    <div class="agent-output">
+
+                        <div class="agent-output-label">
+                            DECISION
+                        </div>
+
+                        <strong
+                            class="agent-recommendation"
+                            id="financeRecommendation"
+                        >
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-row">
+
+                        <span>
+                            Confidence
+                        </span>
+
+                        <strong id="financeConfidence">
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="confidence-track">
+
+                        <div
+                            class="confidence-bar"
+                            id="financeConfidenceBar"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="agent-reasoning">
+
+                        <span>
+                            GUARDRAIL ANALYSIS
+                        </span>
+
+                        <p id="financeReasoning">
+                            Awaiting financial validation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- =================================================
+                 DECISION ENGINE
+                 ================================================= -->
+
+            <section class="decision-panel">
+
+                <div class="decision-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            ORCHESTRATOR
+                        </div>
+
+                        <h2>
+                            Final Recovery Decision
+                        </h2>
+
+                        <p>
+                            The orchestrator synthesizes every agent's
+                            recommendation before executing a recovery strategy.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="decision-status pending"
+                        id="decisionStatus"
+                    >
+                        Decision pending
+                    </div>
+
+                </div>
+
+
+                <div class="decision-body">
+
+
+                    <!-- FINAL ACTION -->
+
+                    <div class="decision-action">
+
+                        <span class="decision-label">
+                            FINAL ACTION
+                        </span>
+
+                        <div
+                            class="final-action"
+                            id="finalAction"
+                        >
+                            Awaiting boardroom
+                        </div>
+
+                        <p
+                            class="decision-reason"
+                            id="decisionReason"
+                        >
+                            Run the boardroom to generate a coordinated
+                            recovery decision.
+                        </p>
+
+                    </div>
+
+
+                    <!-- DECISION METRICS -->
+
+                    <div class="decision-metrics">
+
+                        <div class="decision-metric">
+
+                            <span>
+                                Retry delay
+                            </span>
+
+                            <strong id="retryDelay">
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="decision-metric">
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong id="discountPercent">
+                                0%
+                            </strong>
+
+                        </div>
+
+
+                        <div class="decision-metric">
+
+                            <span>
+                                Expected recovery
+                            </span>
+
+                            <strong id="expectedRecovery">
+                                ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="decision-metric">
+
+                            <span>
+                                Confidence
+                            </span>
+
+                            <strong id="finalConfidence">
+                                —
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CUSTOMER MESSAGE -->
+
+                <div class="customer-message">
+
+                    <div class="message-header">
+
+                        <span class="message-label">
+                            CUSTOMER COMMUNICATION
+                        </span>
+
+                        <span
+                            class="message-status"
+                            id="messageStatus"
+                        >
+                            Not generated
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="message-content"
+                        id="customerMessage"
+                    >
+                        The AI-generated customer communication will
+                        appear here after the boardroom reaches a decision.
+                    </div>
+
+                </div>
+
+
+                <!-- GUARDRAIL -->
+
+                <div class="guardrail-result">
+
+                    <div class="guardrail-result-icon">
+                        ✓
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Finance Guardrail
+                        </strong>
+
+                        <span id="guardrailStatus">
+                            Waiting for validation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 DECISION TRAIL
+                 ================================================= -->
+
+            <section class="decision-trail">
+
+                <div class="trail-header">
+
+                    <div>
+
+                        <div class="eyebrow">
+                            EXPLAINABILITY
+                        </div>
+
+                        <h2>
+                            Decision Trail
+                        </h2>
+
+                    </div>
+
+                    <span class="trail-note">
+                        Every recommendation is traceable
+                    </span>
+
+                </div>
+
+
+                <div class="timeline" id="decisionTimeline">
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker">
+                            1
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <strong>
+                                Transaction received
+                            </strong>
+
+                            <span>
+                                Failed payment entered the recovery engine.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker">
+                            2
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <strong>
+                                Agents analyze independently
+                            </strong>
+
+                            <span>
+                                Risk, timing, customer and offer strategies
+                                are evaluated in parallel.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker">
+                            3
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <strong>
+                                Financial validation
+                            </strong>
+
+                            <span>
+                                Finance Guardrail checks recovery economics
+                                and discount limits.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker">
+                            4
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <strong>
+                                Orchestrator decides
+                            </strong>
+
+                            <span>
+                                Final action is selected using the combined
+                                agent recommendations.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-marker">
+                            5
+                        </div>
+
+                        <div class="timeline-content">
+
+                            <strong>
+                                Recovery action prepared
+                            </strong>
+
+                            <span>
+                                Approved intervention is prepared for execution.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="boardroom.js"></script>
+
+</body>
+</html>

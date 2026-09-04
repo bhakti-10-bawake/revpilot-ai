@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Audit Trail | RevPilot AI</title>
+
+
+    <!-- ================= FONT ================= -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- ================= CSS ================= -->
+
+    <link
+        rel="stylesheet"
+        href="./audit.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APPLICATION SHELL
+         ===================================================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    ↗
+                </div>
+
+
+                <div class="brand-info">
+
+                    <div class="brand-name">
+                        RevPilot <span>AI</span>
+                    </div>
+
+
+                    <div class="brand-caption">
+                        REVENUE RECOVERY INTELLIGENCE
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
+
+            <nav class="sidebar-nav">
+
+
+                <!-- WORKSPACE -->
+
+                <div class="nav-section">
+
+
+                    <div class="nav-section-title">
+                        WORKSPACE
+                    </div>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="nav-item"
+                        data-page="overview"
+                    >
+
+                        <span class="nav-icon">
+                            ⌂
+                        </span>
+
+                        <span>
+                            Overview
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="recovery.html"
+                        class="nav-item"
+                        data-page="recovery"
+                    >
+
+                        <span class="nav-icon">
+                            ↻
+                        </span>
+
+                        <span>
+                            Recovery Queue
+                        </span>
+
+                        <span class="nav-badge">
+                            24
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="transactions.html"
+                        class="nav-item"
+                        data-page="transactions"
+                    >
+
+                        <span class="nav-icon">
+                            ▤
+                        </span>
+
+                        <span>
+                            Transactions
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="customers.html"
+                        class="nav-item"
+                        data-page="customers"
+                    >
+
+                        <span class="nav-icon">
+                            ♙
+                        </span>
+
+                        <span>
+                            Customers
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- AI INTELLIGENCE -->
+
+                <div class="nav-section">
+
+
+                    <div class="nav-section-title">
+                        AI INTELLIGENCE
+                    </div>
+
+
+                    <a
+                        href="boardroom.html"
+                        class="nav-item"
+                        data-page="boardroom"
+                    >
+
+                        <span class="nav-icon">
+                            ✦
+                        </span>
+
+                        <span>
+                            AI Boardroom
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="analytics.html"
+                        class="nav-item"
+                        data-page="analytics"
+                    >
+
+                        <span class="nav-icon">
+                            ◫
+                        </span>
+
+                        <span>
+                            Analytics
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+                <!-- SYSTEM -->
+
+                <div class="nav-section">
+
+
+                    <div class="nav-section-title">
+                        SYSTEM
+                    </div>
+
+
+                    <a
+                        href="audit.html"
+                        class="nav-item active"
+                        data-page="audit"
+                    >
+
+                        <span class="nav-icon">
+                            ☷
+                        </span>
+
+                        <span>
+                            Audit Trail
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="settings.html"
+                        class="nav-item"
+                        data-page="settings"
+                    >
+
+                        <span class="nav-icon">
+                            ⚙
+                        </span>
+
+                        <span>
+                            Settings
+                        </span>
+
+                    </a>
+
+
+                </div>
+
+
+            </nav>
+
+
+            <!-- =================================================
+                 SIDEBAR FOOTER
+                 ================================================= -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- System Status -->
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+
+                    <div>
+
+                        <strong>
+                            AI System Online
+                        </strong>
+
+                        <span>
+                            All agents operational
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- User -->
+
+                <div class="sidebar-user">
+
+
+                    <div class="user-avatar">
+                        RT
+                    </div>
+
+
+                    <div class="user-info">
+
+                        <strong>
+                            Revenue Team
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="logoutBtn"
+                        class="logout-btn"
+                        type="button"
+                        title="Sign out"
+                    >
+                        ↪
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+
+                <div class="breadcrumb">
+
+                    <span>
+                        System
+                    </span>
+
+
+                    <span class="breadcrumb-separator">
+                        /
+                    </span>
+
+
+                    <strong>
+                        Audit Trail
+                    </strong>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- Environment -->
+
+                    <div class="environment-badge">
+
+                        <span class="environment-dot"></span>
+
+                        Synthetic environment
+
+                    </div>
+
+
+                    <!-- Search -->
+
+                    <button
+                        class="topbar-icon-btn"
+                        id="globalSearchBtn"
+                        type="button"
+                        title="Search"
+                    >
+                        ⌕
+                    </button>
+
+
+                    <!-- Notifications -->
+
+                    <button
+                        class="topbar-icon-btn"
+                        id="notificationBtn"
+                        type="button"
+                        title="Notifications"
+                    >
+
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <!-- User -->
+
+                    <div class="topbar-user">
+
+
+                        <div class="topbar-avatar">
+                            RT
+                        </div>
+
+
+                        <div class="topbar-user-info">
+
+                            <strong>
+                                Revenue Team
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </div>
+
+
+                        <span class="topbar-chevron">
+                            ˅
+                        </span>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <section class="page-content">
+
+
+                <!-- PAGE HEADER -->
+
+                <div class="page-header">
+
+
+                    <div class="page-header-copy">
+
+
+                        <div class="eyebrow">
+                            DECISION GOVERNANCE
+                        </div>
+
+
+                        <h1>
+                            Audit Trail
+                        </h1>
+
+
+                        <p>
+                            Trace every recovery decision from transaction
+                            intake through agent analysis, financial
+                            validation, and final orchestration.
+                        </p>
+
+
+                    </div>
+
+
+                    <div class="page-actions">
+
+
+                        <button
+                            class="secondary-btn"
+                            id="exportAuditBtn"
+                            type="button"
+                        >
+
+                            <span>
+                                ↓
+                            </span>
+
+                            Export Audit
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =================================================
+                     GOVERNANCE METRICS
+                     ================================================= -->
+
+                <section class="metrics-grid">
+
+
+                    <article class="metric-card">
+
+
+                        <div class="metric-top">
+
+
+                            <span class="metric-label">
+                                DECISIONS LOGGED
+                            </span>
+
+
+                            <div class="metric-icon blue">
+                                ✓
+                            </div>
+
+
+                        </div>
+
+
+                        <strong class="metric-value">
+                            4,862
+                        </strong>
+
+
+                        <span class="metric-meta">
+                            Fully traceable decisions
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+
+                        <div class="metric-top">
+
+
+                            <span class="metric-label">
+                                GUARDRAIL INTERVENTIONS
+                            </span>
+
+
+                            <div class="metric-icon warning">
+                                !
+                            </div>
+
+
+                        </div>
+
+
+                        <strong class="metric-value">
+                            684
+                        </strong>
+
+
+                        <span class="metric-meta">
+                            Financial controls triggered
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+
+                        <div class="metric-top">
+
+
+                            <span class="metric-label">
+                                RECOVERY ACTIONS STOPPED
+                            </span>
+
+
+                            <div class="metric-icon danger">
+                                ×
+                            </div>
+
+
+                        </div>
+
+
+                        <strong class="metric-value">
+                            312
+                        </strong>
+
+
+                        <span class="metric-meta">
+                            Risk or economics blocked
+                        </span>
+
+
+                    </article>
+
+
+
+                    <article class="metric-card">
+
+
+                        <div class="metric-top">
+
+
+                            <span class="metric-label">
+                                TRACEABILITY
+                            </span>
+
+
+                            <div class="metric-icon success">
+                                100%
+                            </div>
+
+
+                        </div>
+
+
+                        <strong class="metric-value">
+                            100%
+                        </strong>
+
+
+                        <span class="metric-meta">
+                            Decision records complete
+                        </span>
+
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FILTER TOOLBAR
+                     ================================================= -->
+
+                <section class="filter-toolbar">
+
+
+                    <div class="search-box">
+
+
+                        <span class="search-icon">
+                            ⌕
+                        </span>
+
+
+                        <input
+                            type="search"
+                            id="auditSearch"
+                            placeholder="Search transaction, agent, or decision..."
+                            autocomplete="off"
+                        >
+
+
+                    </div>
+
+
+                    <div class="filter-controls">
+
+
+                        <select
+                            id="auditTypeFilter"
+                            aria-label="Filter event type"
+                        >
+
+                            <option value="all">
+                                All events
+                            </option>
+
+                            <option value="transaction">
+                                Transaction events
+                            </option>
+
+                            <option value="agent">
+                                Agent decisions
+                            </option>
+
+                            <option value="guardrail">
+                                Guardrail events
+                            </option>
+
+                            <option value="orchestrator">
+                                Orchestrator decisions
+                            </option>
+
+                        </select>
+
+
+                        <select
+                            id="auditStatusFilter"
+                            aria-label="Filter status"
+                        >
+
+                            <option value="all">
+                                All statuses
+                            </option>
+
+                            <option value="approved">
+                                Approved
+                            </option>
+
+                            <option value="blocked">
+                                Blocked
+                            </option>
+
+                            <option value="review">
+                                Review required
+                            </option>
+
+                        </select>
+
+
+                        <select
+                            id="auditPeriodFilter"
+                            aria-label="Filter time period"
+                        >
+
+                            <option value="all">
+                                All time
+                            </option>
+
+                            <option value="today">
+                                Today
+                            </option>
+
+                            <option value="7days">
+                                Last 7 days
+                            </option>
+
+                            <option value="30days">
+                                Last 30 days
+                            </option>
+
+                        </select>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     AUDIT CARD
+                     ================================================= -->
+
+                <section class="audit-card">
+
+
+                    <!-- HEADER -->
+
+                    <div class="audit-card-header">
+
+
+                        <div>
+
+
+                            <div class="card-eyebrow">
+                                ACTIVITY LOG
+                            </div>
+
+
+                            <h2>
+                                Decision history
+                            </h2>
+
+
+                            <p>
+                                Traceable event history for every
+                                recovery decision.
+                            </p>
+
+
+                        </div>
+
+
+                        <div class="audit-live">
+
+                            <span></span>
+
+                            Live event stream
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         TIMELINE
+                         ================================================= -->
+
+                    <div
+                        class="audit-timeline"
+                        id="auditTimeline"
+                    >
+
+
+                        <!-- EVENT 1 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="transaction"
+                            data-status="review"
+                            data-period="today"
+                            data-search="txn-00001 transaction received payment declined"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:18
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker transaction">
+                                ↓
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Transaction received
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status review">
+                                        Review
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    Failed payment entered the RevPilot
+                                    recovery engine for analysis.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Payment declined
+                                    </span>
+
+                                    <span>
+                                        ₹12,500
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 2 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="agent"
+                            data-status="approved"
+                            data-period="today"
+                            data-search="txn-00001 risk agent payment risk medium risk"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:19
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker agent">
+                                R
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Risk Agent completed analysis
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status approved">
+                                        Completed
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    Customer and payment signals indicate
+                                    a medium recovery risk. Aggressive
+                                    intervention was not recommended.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Confidence: 86%
+                                    </span>
+
+                                    <span>
+                                        Medium risk
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 3 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="agent"
+                            data-status="approved"
+                            data-period="today"
+                            data-search="txn-00001 timing agent retry timing twelve hours"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:19
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker agent">
+                                T
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Timing Agent recommended retry
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status approved">
+                                        Completed
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    Retry timing shifted to a lower-friction
+                                    window to reduce repeated failure attempts.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Retry delay: 12 hours
+                                    </span>
+
+                                    <span>
+                                        Confidence: 81%
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 4 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="agent"
+                            data-status="approved"
+                            data-period="today"
+                            data-search="txn-00001 customer agent behavior intervention"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:20
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker agent">
+                                C
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Customer Agent evaluated intervention
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status approved">
+                                        Completed
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    Customer behavior supports a personalized
+                                    recovery reminder instead of immediate
+                                    escalation.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Returning customer
+                                    </span>
+
+                                    <span>
+                                        Confidence: 78%
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 5 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="agent"
+                            data-status="review"
+                            data-period="today"
+                            data-search="txn-00001 offer agent discount incentive"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:20
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker agent">
+                                O
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Offer Agent proposed incentive
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status review">
+                                        Review
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    A 10% discount was proposed to improve
+                                    recovery probability.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Proposed discount: 10%
+                                    </span>
+
+                                    <span>
+                                        Pending finance validation
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 6 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="guardrail"
+                            data-status="blocked"
+                            data-period="today"
+                            data-search="txn-00001 finance guardrail rejected discount offer blocked"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:21
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker guardrail">
+                                F
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Finance Guardrail rejected offer
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status blocked">
+                                        Blocked
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    The proposed incentive failed the
+                                    minimum net-recovery threshold and was
+                                    prevented from reaching execution.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Discount: 10%
+                                    </span>
+
+                                    <span>
+                                        Recovery economics failed
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 7 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="orchestrator"
+                            data-status="approved"
+                            data-period="today"
+                            data-search="txn-00001 orchestrator final recovery decision"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:21
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker orchestrator">
+                                ✦
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Orchestrator reached final decision
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status approved">
+                                        Final
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    The recovery strategy was finalized using
+                                    agent recommendations and finance controls.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Action: Retry with reminder
+                                    </span>
+
+                                    <span>
+                                        Confidence: 82%
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- EVENT 8 -->
+
+                        <article
+                            class="audit-event"
+                            data-type="orchestrator"
+                            data-status="approved"
+                            data-period="today"
+                            data-search="txn-00001 recovery action prepared execution ready"
+                        >
+
+
+                            <div class="event-time">
+
+                                <strong>
+                                    12:42:22
+                                </strong>
+
+                                <span>
+                                    Sep 04
+                                </span>
+
+                            </div>
+
+
+                            <div class="event-marker complete">
+                                ✓
+                            </div>
+
+
+                            <div class="event-content">
+
+
+                                <div class="event-header">
+
+
+                                    <div>
+
+                                        <strong>
+                                            Recovery action prepared
+                                        </strong>
+
+                                        <span>
+                                            TXN-00001
+                                        </span>
+
+                                    </div>
+
+
+                                    <span class="event-status approved">
+                                        Ready
+                                    </span>
+
+
+                                </div>
+
+
+                                <p>
+                                    The approved recovery intervention is
+                                    ready for execution under the configured
+                                    policy.
+                                </p>
+
+
+                                <div class="event-meta">
+
+                                    <span>
+                                        Retry window: 12 hours
+                                    </span>
+
+                                    <span>
+                                        Audit record complete
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </article>
+
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         EMPTY STATE
+                         ================================================= -->
+
+                    <div
+                        class="empty-state"
+                        id="emptyAuditState"
+                    >
+
+                        <div class="empty-icon">
+                            ⌕
+                        </div>
+
+
+                        <strong>
+                            No matching audit events
+                        </strong>
+
+
+                        <span>
+                            Try changing your search or filters.
+                        </span>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================================
+                     GOVERNANCE BANNER
+                     ================================================= -->
+
+                <section class="governance-banner">
+
+
+                    <div class="governance-icon">
+                        ✓
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Decision traceability is always on
+                        </strong>
+
+
+                        <p>
+                            RevPilot records transaction context, agent
+                            recommendations, guardrail outcomes, and
+                            orchestrator decisions so recovery actions
+                            remain explainable and reviewable.
+                        </p>
+
+                    </div>
+
+
+                </section>
+
+
+            </section>
+
+
+        </main>
+
+
+    </div>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="./audit.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Customers | RevPilot</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="customers.css"
+    >
+</head>
+
+<body>
+
+    <!-- =====================================================
+         APP SHELL
+         ===================================================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+            <!-- Brand -->
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    R
+                </div>
+
+                <div class="brand-info">
+                    <div class="brand-name">
+                        RevPilot
+                    </div>
+
+                    <div class="brand-caption">
+                        AI REVENUE RECOVERY
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+                <!-- Main -->
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        MAIN
+                    </div>
+
+                    <button
+                        class="nav-item"
+                        data-page="overview"
+                    >
+                        <span class="nav-icon">⌂</span>
+                        <span>Overview</span>
+                    </button>
+
+                    <button
+                        class="nav-item"
+                        data-page="recovery"
+                    >
+                        <span class="nav-icon">↗</span>
+                        <span>Recovery Queue</span>
+
+                        <span class="nav-badge">
+                            24
+                        </span>
+                    </button>
+
+                    <button
+                        class="nav-item"
+                        data-page="boardroom"
+                    >
+                        <span class="nav-icon">✦</span>
+                        <span>AI Boardroom</span>
+                    </button>
+
+                    <button
+                        class="nav-item"
+                        data-page="transactions"
+                    >
+                        <span class="nav-icon">▤</span>
+                        <span>Transactions</span>
+                    </button>
+
+                    <button
+                        class="nav-item active"
+                        data-page="customers"
+                    >
+                        <span class="nav-icon">♙</span>
+                        <span>Customers</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Intelligence -->
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        INTELLIGENCE
+                    </div>
+
+                    <button
+                        class="nav-item"
+                        data-page="analytics"
+                    >
+                        <span class="nav-icon">◒</span>
+                        <span>Analytics</span>
+                    </button>
+
+                    <button
+                        class="nav-item"
+                        data-page="audit"
+                    >
+                        <span class="nav-icon">☷</span>
+                        <span>Audit Trail</span>
+                    </button>
+
+                </div>
+
+
+                <!-- Workspace -->
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        WORKSPACE
+                    </div>
+
+                    <button
+                        class="nav-item"
+                        data-page="settings"
+                    >
+                        <span class="nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>AI System Online</strong>
+                        <span>All agents operational</span>
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-user">
+
+                    <div class="user-avatar">
+                        BB
+                    </div>
+
+                    <div class="user-info">
+                        <strong>Revenue Team</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <button
+                        class="logout-btn"
+                        title="Logout"
+                    >
+                        ↪
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOPBAR
+                 ================================================= -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <div class="breadcrumb">
+                        Workspace
+                        <span>/</span>
+                        Customers
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+                    <div class="simulation-badge">
+                        <span class="simulation-dot"></span>
+                        Simulation Mode
+                    </div>
+
+                    <button
+                        class="topbar-icon-btn"
+                        aria-label="Notifications"
+                    >
+                        ♢
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar">
+                            BB
+                        </div>
+
+                        <span>Revenue Team</span>
+
+                        <span class="chevron">
+                            ▾
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <section class="page-content">
+
+
+                <!-- Page Header -->
+
+                <div class="page-header">
+
+                    <div class="page-header-text">
+
+                        <div class="eyebrow">
+                            CUSTOMER INTELLIGENCE
+                        </div>
+
+                        <h1>
+                            Customers
+                        </h1>
+
+                        <p>
+                            Understand customer payment behavior and
+                            recovery opportunities across your revenue base.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-header-actions">
+
+                        <button
+                            class="secondary-btn"
+                            data-action="export"
+                        >
+                            <span>↓</span>
+                            Export
+                        </button>
+
+                        <button
+                            class="primary-btn"
+                            data-action="refresh"
+                        >
+                            <span>↻</span>
+                            Refresh Data
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CUSTOMER METRICS
+                     ================================================= -->
+
+                <div class="metric-grid">
+
+                    <div class="metric-card">
+
+                        <div class="metric-card-top">
+
+                            <span class="metric-label">
+                                Total Customers
+                            </span>
+
+                            <div class="metric-icon">
+                                ♙
+                            </div>
+
+                        </div>
+
+                        <div class="metric-value">
+                            8,492
+                        </div>
+
+                        <div class="metric-meta">
+                            <span class="metric-positive">
+                                +8.4%
+                            </span>
+                            <span>
+                                vs last month
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-card-top">
+
+                            <span class="metric-label">
+                                At-Risk Customers
+                            </span>
+
+                            <div class="metric-icon danger">
+                                !
+                            </div>
+
+                        </div>
+
+                        <div class="metric-value">
+                            684
+                        </div>
+
+                        <div class="metric-meta">
+                            <span class="metric-warning">
+                                8.1%
+                            </span>
+                            <span>
+                                of customer base
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-card-top">
+
+                            <span class="metric-label">
+                                Recovery Rate
+                            </span>
+
+                            <div class="metric-icon success">
+                                ✓
+                            </div>
+
+                        </div>
+
+                        <div class="metric-value">
+                            73.2%
+                        </div>
+
+                        <div class="metric-meta">
+                            <span class="metric-positive">
+                                +5.7%
+                            </span>
+                            <span>
+                                improvement
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="metric-card">
+
+                        <div class="metric-card-top">
+
+                            <span class="metric-label">
+                                Avg. Customer Value
+                            </span>
+
+                            <div class="metric-icon">
+                                ₹
+                            </div>
+
+                        </div>
+
+                        <div class="metric-value">
+                            ₹18,640
+                        </div>
+
+                        <div class="metric-meta">
+                            <span class="metric-positive">
+                                +3.2%
+                            </span>
+                            <span>
+                                recovered value
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CUSTOMER TOOLBAR
+                     ================================================= -->
+
+                <div class="customer-toolbar">
+
+                    <div class="search-box">
+
+                        <span class="search-icon">
+                            ⌕
+                        </span>
+
+                        <input
+                            type="text"
+                            id="customerSearch"
+                            placeholder="Search customers..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <div class="filter-group">
+
+                        <select id="riskFilter">
+
+                            <option value="all">
+                                All Risk Levels
+                            </option>
+
+                            <option value="low">
+                                Low Risk
+                            </option>
+
+                            <option value="medium">
+                                Medium Risk
+                            </option>
+
+                            <option value="high">
+                                High Risk
+                            </option>
+
+                        </select>
+
+
+                        <select id="segmentFilter">
+
+                            <option value="all">
+                                All Segments
+                            </option>
+
+                            <option value="high-value">
+                                High Value
+                            </option>
+
+                            <option value="returning">
+                                Returning
+                            </option>
+
+                            <option value="new">
+                                New Customers
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CUSTOMER TABLE
+                     ================================================= -->
+
+                <div class="customer-table-card">
+
+                    <div class="table-header">
+
+                        <div>
+
+                            <h2>
+                                Customer Portfolio
+                            </h2>
+
+                            <p>
+                                Customer-level recovery intelligence
+                            </p>
+
+                        </div>
+
+                        <div class="table-header-meta">
+
+                            <span class="live-indicator">
+                                <span></span>
+                                Live
+                            </span>
+
+                            5 customers
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="table-wrapper">
+
+                        <table class="customer-table">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        CUSTOMER
+                                    </th>
+
+                                    <th>
+                                        CUSTOMER VALUE
+                                    </th>
+
+                                    <th>
+                                        FAILED PAYMENTS
+                                    </th>
+
+                                    <th>
+                                        RECOVERY RATE
+                                    </th>
+
+                                    <th>
+                                        RISK
+                                    </th>
+
+                                    <th>
+                                        LAST ACTIVITY
+                                    </th>
+
+                                    <th>
+                                        ACTION
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <!-- Customer 1 -->
+
+                                <tr
+                                    class="customer-row"
+                                    data-customer="Aarav Sharma"
+                                    data-risk="high"
+                                    data-segment="high-value"
+                                >
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="customer-avatar">
+                                                AS
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Aarav Sharma
+                                                </strong>
+
+                                                <span>
+                                                    aarav.sharma@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹48,500
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Lifetime value
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            4
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Last 30 days
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="recovery-rate">
+
+                                            <strong>
+                                                52%
+                                            </strong>
+
+                                            <div class="progress-bar">
+                                                <span style="width:52%"></span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill high">
+                                            High
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="activity-cell">
+                                            <strong>
+                                                Today
+                                            </strong>
+
+                                            <span>
+                                                12:42 PM
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="view-btn"
+                                            data-customer="Aarav Sharma"
+                                        >
+                                            View
+                                            <span>→</span>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Customer 2 -->
+
+                                <tr
+                                    class="customer-row"
+                                    data-customer="Priya Mehta"
+                                    data-risk="medium"
+                                    data-segment="returning"
+                                >
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="customer-avatar">
+                                                PM
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Priya Mehta
+                                                </strong>
+
+                                                <span>
+                                                    priya.mehta@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹31,200
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Lifetime value
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            2
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Last 30 days
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="recovery-rate">
+
+                                            <strong>
+                                                76%
+                                            </strong>
+
+                                            <div class="progress-bar">
+                                                <span style="width:76%"></span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill medium">
+                                            Medium
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="activity-cell">
+                                            <strong>
+                                                Today
+                                            </strong>
+
+                                            <span>
+                                                12:18 PM
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="view-btn"
+                                            data-customer="Priya Mehta"
+                                        >
+                                            View
+                                            <span>→</span>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Customer 3 -->
+
+                                <tr
+                                    class="customer-row"
+                                    data-customer="Rohan Patel"
+                                    data-risk="medium"
+                                    data-segment="high-value"
+                                >
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="customer-avatar">
+                                                RP
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Rohan Patel
+                                                </strong>
+
+                                                <span>
+                                                    rohan.patel@example.com
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹62,800
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Lifetime value
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            3
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Last 30 days
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="recovery-rate">
+
+                                            <strong>
+                                                68%
+                                            </strong>
+
+                                            <div class="progress-bar">
+                                                <span style="width:68%"></span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill medium">
+                                            Medium
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="activity-cell">
+                                            <strong>
+                                                Today
+                                            </strong>
+
+                                            <span>
+                                                11:56 AM
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="view-btn"
+                                            data-customer="Rohan Patel"
+                                        >
+                                            View
+                                            <span>→</span>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Customer 4 -->
+
+                                <tr
+                                    class="customer-row"
+                                    data-customer="Sneha Kulkarni"
+                                    data-risk="low"
+                                    data-segment="returning"
+                                >
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="customer-avatar">
+                                                SK
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Sneha Kulkarni
+                                                </strong>
+
+                                                <span>
+                                                    sneha.kulkarni@example.com
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹27,400
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Lifetime value
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            1
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Last 30 days
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="recovery-rate">
+
+                                            <strong>
+                                                91%
+                                            </strong>
+
+                                            <div class="progress-bar">
+                                                <span style="width:91%"></span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill low">
+                                            Low
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="activity-cell">
+                                            <strong>
+                                                Today
+                                            </strong>
+
+                                            <span>
+                                                11:31 AM
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="view-btn"
+                                            data-customer="Sneha Kulkarni"
+                                        >
+                                            View
+                                            <span>→</span>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+
+                                <!-- Customer 5 -->
+
+                                <tr
+                                    class="customer-row"
+                                    data-customer="Vikram Rao"
+                                    data-risk="high"
+                                    data-segment="new"
+                                >
+
+                                    <td>
+
+                                        <div class="customer-cell">
+
+                                            <div class="customer-avatar">
+                                                VR
+                                            </div>
+
+                                            <div>
+                                                <strong>
+                                                    Vikram Rao
+                                                </strong>
+
+                                                <span>
+                                                    vikram.rao@example.com
+                                                </span>
+
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            ₹19,800
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Lifetime value
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <strong>
+                                            3
+                                        </strong>
+
+                                        <span class="sub-value">
+                                            Last 30 days
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="recovery-rate">
+
+                                            <strong>
+                                                44%
+                                            </strong>
+
+                                            <div class="progress-bar">
+                                                <span style="width:44%"></span>
+                                            </div>
+
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <span class="risk-pill high">
+                                            High
+                                        </span>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <div class="activity-cell">
+                                            <strong>
+                                                Today
+                                            </strong>
+
+                                            <span>
+                                                10:48 AM
+                                            </span>
+                                        </div>
+
+                                    </td>
+
+
+                                    <td>
+
+                                        <button
+                                            class="view-btn"
+                                            data-customer="Vikram Rao"
+                                        >
+                                            View
+                                            <span>→</span>
+                                        </button>
+
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <!-- Table Footer -->
+
+                    <div class="table-footer">
+
+                        <div class="pagination-info">
+                            Showing 1–5 of 8,492 customers
+                        </div>
+
+                        <div class="pagination">
+
+                            <button
+                                class="pagination-btn"
+                                disabled
+                            >
+                                ←
+                            </button>
+
+                            <button class="pagination-number active">
+                                1
+                            </button>
+
+                            <button class="pagination-number">
+                                2
+                            </button>
+
+                            <button class="pagination-number">
+                                3
+                            </button>
+
+                            <span>...</span>
+
+                            <button class="pagination-number">
+                                1,699
+                            </button>
+
+                            <button class="pagination-btn">
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CUSTOMER INTELLIGENCE BANNER
+                     ================================================= -->
+
+                <div class="info-banner">
+
+                    <div class="info-banner-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            AI-powered customer intelligence
+                        </strong>
+
+                        <p>
+                            RevPilot continuously evaluates payment
+                            behavior, recovery history, customer value,
+                            and engagement signals to prioritize the
+                            right recovery strategy.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script src="customers.js"></script>
+
+</body>
+</html>

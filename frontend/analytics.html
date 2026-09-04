@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Analytics | RevPilot AI</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="./analytics.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         APP SHELL
+         ===================================================== -->
+
+    <div class="app-shell">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    ↗
+                </div>
+
+                <div class="brand-info">
+
+                    <div class="brand-name">
+                        RevPilot <span>AI</span>
+                    </div>
+
+                    <div class="brand-caption">
+                        REVENUE RECOVERY INTELLIGENCE
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="sidebar-nav">
+
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        WORKSPACE
+                    </div>
+
+
+                    <a
+                        href="dashboard.html"
+                        class="nav-item"
+                        data-page="overview"
+                    >
+                        <span class="nav-icon">⌂</span>
+                        <span>Overview</span>
+                    </a>
+
+
+                    <a
+                        href="recovery.html"
+                        class="nav-item"
+                        data-page="recovery"
+                    >
+                        <span class="nav-icon">↻</span>
+                        <span>Recovery Queue</span>
+
+                        <span class="nav-badge">
+                            24
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="transactions.html"
+                        class="nav-item"
+                        data-page="transactions"
+                    >
+                        <span class="nav-icon">▤</span>
+                        <span>Transactions</span>
+                    </a>
+
+
+                    <a
+                        href="customers.html"
+                        class="nav-item"
+                        data-page="customers"
+                    >
+                        <span class="nav-icon">♙</span>
+                        <span>Customers</span>
+                    </a>
+
+                </div>
+
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        AI INTELLIGENCE
+                    </div>
+
+
+                    <a
+                        href="boardroom.html"
+                        class="nav-item"
+                        data-page="boardroom"
+                    >
+                        <span class="nav-icon">✦</span>
+                        <span>AI Boardroom</span>
+                    </a>
+
+
+                    <a
+                        href="analytics.html"
+                        class="nav-item active"
+                        data-page="analytics"
+                    >
+                        <span class="nav-icon">◫</span>
+                        <span>Analytics</span>
+                    </a>
+
+                </div>
+
+
+                <div class="nav-section">
+
+                    <div class="nav-section-title">
+                        SYSTEM
+                    </div>
+
+
+                    <a
+                        href="audit.html"
+                        class="nav-item"
+                        data-page="audit"
+                    >
+                        <span class="nav-icon">☷</span>
+                        <span>Audit Trail</span>
+                    </a>
+
+
+                    <a
+                        href="settings.html"
+                        class="nav-item"
+                        data-page="settings"
+                    >
+                        <span class="nav-icon">⚙</span>
+                        <span>Settings</span>
+                    </a>
+
+                </div>
+
+            </nav>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+
+                        <strong>
+                            AI System Online
+                        </strong>
+
+                        <span>
+                            All agents operational
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-user">
+
+                    <div class="user-avatar">
+                        RT
+                    </div>
+
+                    <div class="user-info">
+
+                        <strong>
+                            Revenue Team
+                        </strong>
+
+                        <span>
+                            Administrator
+                        </span>
+
+                    </div>
+
+
+                    <button
+                        id="logoutBtn"
+                        class="logout-btn"
+                        title="Sign out"
+                    >
+                        ↪
+                    </button>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- TOPBAR -->
+
+            <header class="topbar">
+
+
+                <div class="breadcrumb">
+
+                    <span>
+                        AI Intelligence
+                    </span>
+
+                    <span class="breadcrumb-separator">
+                        /
+                    </span>
+
+                    <strong>
+                        Analytics
+                    </strong>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <div class="environment-badge">
+
+                        <span class="environment-dot"></span>
+
+                        Synthetic environment
+
+                    </div>
+
+
+                    <button
+                        class="topbar-icon-btn"
+                        id="globalSearchBtn"
+                        title="Search"
+                    >
+                        ⌕
+                    </button>
+
+
+                    <button
+                        class="topbar-icon-btn"
+                        id="notificationBtn"
+                        title="Notifications"
+                    >
+                        ♢
+
+                        <span class="notification-dot"></span>
+
+                    </button>
+
+
+                    <div class="topbar-user">
+
+                        <div class="topbar-avatar">
+                            RT
+                        </div>
+
+                        <div class="topbar-user-info">
+
+                            <strong>
+                                Revenue Team
+                            </strong>
+
+                            <span>
+                                Administrator
+                            </span>
+
+                        </div>
+
+                        <span class="topbar-chevron">
+                            ˅
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE CONTENT
+                 ================================================= -->
+
+            <section class="page-content">
+
+
+                <!-- PAGE HEADER -->
+
+                <div class="page-header">
+
+
+                    <div class="page-header-copy">
+
+                        <div class="eyebrow">
+                            REVENUE INTELLIGENCE
+                        </div>
+
+                        <h1>
+                            Analytics
+                        </h1>
+
+                        <p>
+                            Measure recovery performance, AI intervention
+                            impact, and the revenue protected by RevPilot.
+                        </p>
+
+                    </div>
+
+
+                    <div class="page-actions">
+
+                        <select
+                            id="analyticsPeriod"
+                            class="period-select"
+                        >
+
+                            <option value="30">
+                                Last 30 days
+                            </option>
+
+                            <option value="7">
+                                Last 7 days
+                            </option>
+
+                            <option value="90">
+                                Last 90 days
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            class="secondary-btn"
+                            id="exportAnalyticsBtn"
+                        >
+                            ↓
+                            Export Report
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     KPI CARDS
+                     ================================================= -->
+
+                <section class="metrics-grid">
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                REVENUE AT RISK
+                            </span>
+
+                            <div class="metric-icon warning">
+                                ₹
+                            </div>
+
+                        </div>
+
+                        <strong class="metric-value">
+                            ₹24.8L
+                        </strong>
+
+                        <div class="metric-meta positive">
+                            ↓ 8.4% vs previous period
+                        </div>
+
+                    </article>
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                AI-RECOVERED REVENUE
+                            </span>
+
+                            <div class="metric-icon success">
+                                ↗
+                            </div>
+
+                        </div>
+
+                        <strong class="metric-value">
+                            ₹6.84L
+                        </strong>
+
+                        <div class="metric-meta positive">
+                            ↑ 14.2% vs previous period
+                        </div>
+
+                    </article>
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                RECOVERY RATE
+                            </span>
+
+                            <div class="metric-icon blue">
+                                %
+                            </div>
+
+                        </div>
+
+                        <strong class="metric-value">
+                            73.2%
+                        </strong>
+
+                        <div class="metric-meta positive">
+                            ↑ 5.7 percentage points
+                        </div>
+
+                    </article>
+
+
+                    <article class="metric-card">
+
+                        <div class="metric-top">
+
+                            <span>
+                                REVENUE PROTECTED
+                            </span>
+
+                            <div class="metric-icon purple">
+                                ✦
+                            </div>
+
+                        </div>
+
+                        <strong class="metric-value">
+                            ₹11.6L
+                        </strong>
+
+                        <div class="metric-meta">
+                            From prevented over-retries
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     MAIN ANALYTICS GRID
+                     ================================================= -->
+
+                <section class="analytics-grid">
+
+
+                    <!-- =================================================
+                         RECOVERY TREND
+                         ================================================= -->
+
+                    <article class="analytics-card trend-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    RECOVERY PERFORMANCE
+                                </div>
+
+                                <h2>
+                                    Revenue recovery trend
+                                </h2>
+
+                                <p>
+                                    Recovered revenue over the selected period.
+                                </p>
+
+                            </div>
+
+                            <div class="chart-legend">
+
+                                <span>
+                                    <i class="legend-recovered"></i>
+                                    Recovered
+                                </span>
+
+                                <span>
+                                    <i class="legend-risk"></i>
+                                    At risk
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="trend-chart">
+
+                            <div class="y-axis">
+
+                                <span>
+                                    ₹8L
+                                </span>
+
+                                <span>
+                                    ₹6L
+                                </span>
+
+                                <span>
+                                    ₹4L
+                                </span>
+
+                                <span>
+                                    ₹2L
+                                </span>
+
+                                <span>
+                                    ₹0
+                                </span>
+
+                            </div>
+
+
+                            <div class="chart-canvas">
+
+
+                                <div class="grid-line line-1"></div>
+                                <div class="grid-line line-2"></div>
+                                <div class="grid-line line-3"></div>
+                                <div class="grid-line line-4"></div>
+                                <div class="grid-line line-5"></div>
+
+
+                                <div class="trend-area"></div>
+
+                                <div class="trend-line"></div>
+
+
+                                <div class="data-point point-1"></div>
+                                <div class="data-point point-2"></div>
+                                <div class="data-point point-3"></div>
+                                <div class="data-point point-4"></div>
+                                <div class="data-point point-5"></div>
+                                <div class="data-point point-6"></div>
+                                <div class="data-point point-7"></div>
+
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="x-axis">
+
+                            <span>
+                                Aug 08
+                            </span>
+
+                            <span>
+                                Aug 13
+                            </span>
+
+                            <span>
+                                Aug 18
+                            </span>
+
+                            <span>
+                                Aug 23
+                            </span>
+
+                            <span>
+                                Aug 28
+                            </span>
+
+                            <span>
+                                Sep 02
+                            </span>
+
+                            <span>
+                                Sep 04
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         RECOVERY OUTCOME
+                         ================================================= -->
+
+                    <article class="analytics-card outcome-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    RECOVERY OUTCOMES
+                                </div>
+
+                                <h2>
+                                    Payment outcomes
+                                </h2>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="outcome-visual">
+
+                            <div class="donut">
+
+                                <div class="donut-inner">
+
+                                    <strong>
+                                        73.2%
+                                    </strong>
+
+                                    <span>
+                                        recovered
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="outcome-list">
+
+
+                            <div class="outcome-item">
+
+                                <div class="outcome-label">
+
+                                    <span class="dot recovered-dot"></span>
+
+                                    <span>
+                                        Recovered
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    73.2%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="outcome-item">
+
+                                <div class="outcome-label">
+
+                                    <span class="dot pending-dot"></span>
+
+                                    <span>
+                                        Pending
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    12.5%
+                                </strong>
+
+                            </div>
+
+
+                            <div class="outcome-item">
+
+                                <div class="outcome-label">
+
+                                    <span class="dot stopped-dot"></span>
+
+                                    <span>
+                                        Stopped
+                                    </span>
+
+                                </div>
+
+                                <strong>
+                                    14.3%
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FAILURE ANALYSIS + AGENT IMPACT
+                     ================================================= -->
+
+                <section class="analytics-grid secondary-grid">
+
+
+                    <!-- FAILURE REASONS -->
+
+                    <article class="analytics-card failure-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    FAILURE ANALYSIS
+                                </div>
+
+                                <h2>
+                                    Revenue by failure reason
+                                </h2>
+
+                            </div>
+
+
+                            <span class="card-period">
+                                Current period
+                            </span>
+
+                        </div>
+
+
+                        <div class="horizontal-chart">
+
+
+                            <div class="bar-row">
+
+                                <div class="bar-label">
+                                    <span>
+                                        Insufficient funds
+                                    </span>
+
+                                    <strong>
+                                        ₹9.2L
+                                    </strong>
+                                </div>
+
+                                <div class="bar-track">
+                                    <span
+                                        class="bar-fill"
+                                        style="width:86%"
+                                    ></span>
+                                </div>
+
+                                <span class="bar-percent">
+                                    37%
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div class="bar-label">
+                                    <span>
+                                        Bank error
+                                    </span>
+
+                                    <strong>
+                                        ₹6.4L
+                                    </strong>
+                                </div>
+
+                                <div class="bar-track">
+                                    <span
+                                        class="bar-fill"
+                                        style="width:67%"
+                                    ></span>
+                                </div>
+
+                                <span class="bar-percent">
+                                    26%
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div class="bar-label">
+                                    <span>
+                                        Payment declined
+                                    </span>
+
+                                    <strong>
+                                        ₹4.8L
+                                    </strong>
+                                </div>
+
+                                <div class="bar-track">
+                                    <span
+                                        class="bar-fill"
+                                        style="width:52%"
+                                    ></span>
+                                </div>
+
+                                <span class="bar-percent">
+                                    19%
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div class="bar-label">
+                                    <span>
+                                        Network timeout
+                                    </span>
+
+                                    <strong>
+                                        ₹2.7L
+                                    </strong>
+                                </div>
+
+                                <div class="bar-track">
+                                    <span
+                                        class="bar-fill"
+                                        style="width:32%"
+                                    ></span>
+                                </div>
+
+                                <span class="bar-percent">
+                                    11%
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-row">
+
+                                <div class="bar-label">
+                                    <span>
+                                        Card expired
+                                    </span>
+
+                                    <strong>
+                                        ₹1.7L
+                                    </strong>
+                                </div>
+
+                                <div class="bar-track">
+                                    <span
+                                        class="bar-fill"
+                                        style="width:20%"
+                                    ></span>
+                                </div>
+
+                                <span class="bar-percent">
+                                    7%
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- AGENT IMPACT -->
+
+                    <article class="analytics-card agent-impact-card">
+
+
+                        <div class="card-header">
+
+                            <div>
+
+                                <div class="card-eyebrow">
+                                    AI PERFORMANCE
+                                </div>
+
+                                <h2>
+                                    Agent contribution
+                                </h2>
+
+                                <p>
+                                    Decisions influenced by each specialist.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="agent-impact-list">
+
+
+                            <div class="agent-impact-item">
+
+                                <div class="agent-impact-top">
+
+                                    <div class="agent-name-wrap">
+
+                                        <span class="agent-symbol risk">
+                                            R
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Risk Agent
+                                            </strong>
+
+                                            <span>
+                                                Risk prevention
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        31%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="impact-track">
+                                    <span
+                                        style="width:31%"
+                                    ></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="agent-impact-item">
+
+                                <div class="agent-impact-top">
+
+                                    <div class="agent-name-wrap">
+
+                                        <span class="agent-symbol timing">
+                                            T
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Timing Agent
+                                            </strong>
+
+                                            <span>
+                                                Retry optimization
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        24%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="impact-track">
+                                    <span
+                                        style="width:24%"
+                                    ></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="agent-impact-item">
+
+                                <div class="agent-impact-top">
+
+                                    <div class="agent-name-wrap">
+
+                                        <span class="agent-symbol customer">
+                                            C
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Customer Agent
+                                            </strong>
+
+                                            <span>
+                                                Customer intervention
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        18%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="impact-track">
+                                    <span
+                                        style="width:18%"
+                                    ></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="agent-impact-item">
+
+                                <div class="agent-impact-top">
+
+                                    <div class="agent-name-wrap">
+
+                                        <span class="agent-symbol offer">
+                                            O
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Offer Agent
+                                            </strong>
+
+                                            <span>
+                                                Incentive optimization
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        15%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="impact-track">
+                                    <span
+                                        style="width:15%"
+                                    ></span>
+                                </div>
+
+                            </div>
+
+
+                            <div class="agent-impact-item">
+
+                                <div class="agent-impact-top">
+
+                                    <div class="agent-name-wrap">
+
+                                        <span class="agent-symbol finance">
+                                            F
+                                        </span>
+
+                                        <div>
+
+                                            <strong>
+                                                Finance Guardrail
+                                            </strong>
+
+                                            <span>
+                                                Financial controls
+                                            </span>
+
+                                        </div>
+
+                                    </div>
+
+                                    <strong>
+                                        12%
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="impact-track">
+                                    <span
+                                        style="width:12%"
+                                    ></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     BUSINESS IMPACT
+                     ================================================= -->
+
+                <section class="impact-panel">
+
+
+                    <div class="impact-heading">
+
+                        <div>
+
+                            <div class="eyebrow">
+                                BUSINESS IMPACT
+                            </div>
+
+                            <h2>
+                                What RevPilot is changing
+                            </h2>
+
+                            <p>
+                                Recovery intelligence turns payment failures
+                                into measurable revenue decisions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="impact-grid">
+
+
+                        <div class="impact-item">
+
+                            <span class="impact-number">
+                                18.4%
+                            </span>
+
+                            <strong>
+                                fewer unnecessary retries
+                            </strong>
+
+                            <span>
+                                Risk-aware intervention prevents
+                                low-value recovery attempts.
+                            </span>
+
+                        </div>
+
+
+                        <div class="impact-item">
+
+                            <span class="impact-number">
+                                ₹11.6L
+                            </span>
+
+                            <strong>
+                                revenue protected
+                            </strong>
+
+                            <span>
+                                Financial guardrails prevent
+                                uneconomic incentives.
+                            </span>
+
+                        </div>
+
+
+                        <div class="impact-item">
+
+                            <span class="impact-number">
+                                2.7×
+                            </span>
+
+                            <strong>
+                                faster decisioning
+                            </strong>
+
+                            <span>
+                                Multiple specialists evaluate a case
+                                before the orchestrator decides.
+                            </span>
+
+                        </div>
+
+
+                        <div class="impact-item">
+
+                            <span class="impact-number">
+                                100%
+                            </span>
+
+                            <strong>
+                                decision traceability
+                            </strong>
+
+                            <span>
+                                Every recovery recommendation is
+                                recorded for review.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================================
+                     FOOTER
+                     ================================================= -->
+
+                <footer>
+
+                    <span>
+                        RevPilot AI
+                    </span>
+
+                    <span>
+                        Revenue Recovery Intelligence
+                    </span>
+
+                    <span>
+                        Synthetic analysis environment
+                    </span>
+
+                </footer>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="./analytics.js"></script>
+
+</body>
+
+</html>
